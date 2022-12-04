@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D3DD9762-C71E-4AC6-960F-6DEF42ED6CE3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GladiatorFights</RootNamespace>
+    <AssemblyName>GladiatorFights</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArenaModule.cs" />
+    <Compile Include="BusinessObjects\Fighters\BaseFighter.cs" />
+    <Compile Include="BusinessObjects\Fighters\Berserk.cs" />
+    <Compile Include="BusinessObjects\Fighters\Healer.cs" />
+    <Compile Include="BusinessObjects\Fighters\MagicianOfFire.cs" />
+    <Compile Include="BusinessObjects\Fighters\Thief.cs" />
+    <Compile Include="BusinessObjects\Fighters\Warrior.cs" />
+    <Compile Include="Console\ConsoleInputMethods.cs" />
+    <Compile Include="Console\ConsoleOutputMethods.cs" />
+    <Compile Include="Controllers\ArenaModuleController.cs" />
+    <Compile Include="Controllers\ArenaModuleLoader.cs" />
+    <Compile Include="Creators\ArenaModuleCreator.cs" />
+    <Compile Include="Console\DialogResult.cs" />
+    <Compile Include="Dto\ColoredText.cs" />
+    <Compile Include="Enums\FighterType.cs" />
+    <Compile Include="Interfaces\Fighters\IFighter.cs" />
+    <Compile Include="Interfaces\IRunnable.cs" />
+    <Compile Include="Interfaces\Views\IBattleView.cs" />
+    <Compile Include="Interfaces\Views\IFighterInfoBar.cs" />
+    <Compile Include="Interfaces\Views\IFightersSelectionView.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\BattleView.cs" />
+    <Compile Include="Views\ConsoleRecord.cs" />
+    <Compile Include="Views\ConsoleTable.cs" />
+    <Compile Include="Views\FighterInfoBar.cs" />
+    <Compile Include="Views\FightersSelectionView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
