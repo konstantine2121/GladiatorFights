@@ -35,3 +35,17 @@
 ### Воин [Warrior]
 
 Cнижение получаемого урона за счет брони.
+
+## Примеры работы программы
+
+### Экран выбора бойцов
+
+![](Screens/Fighters_Selection_Screen.png)
+
+### Экран этапа поединка
+
+![](Screens/Battle_Screen.png)
+
+### Экран окончания боя
+
+![](Screens/End_Screen.png)
