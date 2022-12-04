@@ -1,4 +1,5 @@
 ﻿using GladiatorFights.Creators;
+using System;
 
 namespace GladiatorFights
 {
@@ -6,6 +7,8 @@ namespace GladiatorFights
     {
         static void Main(string[] args)
         {
+            Console.WindowHeight = 32;
+
             var creator = new ArenaModuleCreator();
             var module = creator.Create();
             module.Run();
