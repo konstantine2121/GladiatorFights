@@ -5,7 +5,7 @@ namespace GladiatorFights.Views
 {
     class FighterInfoBar : ConsoleTable, IFighterInfoBar
     {
-        private IFighter _fighter;
+        private IInfoProvider _fighter;
 
         public FighterInfoBar(int positionLeft, int positionTop)
             : base(positionLeft, positionTop)
@@ -23,7 +23,7 @@ namespace GladiatorFights.Views
             base.Update();
         }
 
-        public void Bind(IFighter fighter)
+        public void Bind(IInfoProvider fighter)
         {
             _fighter = fighter;
         }

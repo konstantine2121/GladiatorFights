@@ -59,6 +59,7 @@
     <Compile Include="Dto\ColoredText.cs" />
     <Compile Include="Enums\FighterType.cs" />
     <Compile Include="Interfaces\Fighters\IFighter.cs" />
+    <Compile Include="Interfaces\Fighters\IInfoProvider.cs" />
     <Compile Include="Interfaces\IRunnable.cs" />
     <Compile Include="Interfaces\Views\IBattleView.cs" />
     <Compile Include="Interfaces\Views\IFighterInfoBar.cs" />

@@ -4,7 +4,7 @@ namespace GladiatorFights.Interfaces.Views
 {
     interface IFighterInfoBar
     {
-        void Bind(IFighter fighter);
+        void Bind(IInfoProvider fighter);
         void Update();
     }
 }

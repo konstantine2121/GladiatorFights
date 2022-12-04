@@ -4,7 +4,7 @@ using GladiatorFights.Dto;
 
 namespace GladiatorFights.Interfaces.Fighters
 {
-    public interface IFighter
+    public interface IFighter : IInfoProvider
     {
         event Action<IFighter> Died;
 
@@ -21,8 +21,6 @@ namespace GladiatorFights.Interfaces.Fighters
         int DealDamage();
 
         int TakeDamage(int incomingDamage);
-
-        IReadOnlyList<ColoredText> GetInfo();
 
         void Regenerate();
 
